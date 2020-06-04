@@ -9,8 +9,8 @@ server.use(helmet());
 
 server.use('/api', apiRouter);
 
-// server.get("/", (req, res) => {
-//     res.status(200).json({ api: "its alive!" });
-//   });
+server.get("/", (req, res) => {
+    res.status(200).json({ environment: process.env.NODE.ENV });
+  });
 
 module.exports = server;
