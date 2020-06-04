@@ -9,7 +9,7 @@ server.use(helmet());
 
 server.use('/api', apiRouter);
 
-server.get("/", (req, res) => {
+server.get("/", function(req, res) {
     res.status(200).json({ environment: process.env.NODE.ENV });
   });
 
